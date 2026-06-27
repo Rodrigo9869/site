@@ -58,11 +58,38 @@ footer {
     padding-right: 250px; /* FAZ A MAGIA: Estica a linha um pouco para além do ano */
 }
 
-.bloco-cronologico {
-    text-align: left; 
-    margin-bottom: 50px; 
+.descricao-feito {
+    flex: 1; /* Distribui o espaço igualmente */
+    min-width: 300px; /* Garante que o texto não esmaga em ecrãs pequenos */
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
 }
 
+.bloco-cronologico1 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o ano fique no topo sozito */
+    gap: 30px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 80px;
+    align-items: center; /* Centra verticalmente a imagem com o texto */
+}
+
+/* --- BLOCO CRONOLÓGICO 2 (Imagem à Direita, Texto à Esquerda) --- */
+.bloco-cronologico2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.bloco-cronologico2 .descricao-feito {
+    order: 1;
+}
+
+.bloco-cronologico2 img {
+    order: 2;
+}
 
 .titulo-feito {
     margin: 0 0 10px 0;
