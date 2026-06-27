@@ -46,26 +46,37 @@ footer {
     margin-top: 20px;
 }
 
-/* Estilo do Ano à esquerda com a linha por baixo */
-.ano-destaque {
-    font-family: 'Arial Black', sans-serif;
-    letter-spacing: -2px;
-    text-align: left;
-    margin: 0 0 10px 0; /* Margem apenas na parte de baixo */
-    display: inline-block; /* Faz com que a linha por baixo ocupe apenas o tamanho do texto do ano */
-    border-bottom: 4px solid #333; /* Cria a linha escura diretamente abaixo do ano */
-    padding-bottom: 5px; /* Espaço entre o número do ano e a linha */
-    padding-right: 250px; /* FAZ A MAGIA: Estica a linha um pouco para além do ano */
+.titulo-feito {
+    margin: 0 0 10px 0;
 }
 
 .descricao-feito {
-    flex: 1; /* Distribui o espaço igualmente */
-    min-width: 300px; /* Garante que o texto não esmaga em ecrãs pequenos */
-    font-size: 1.05rem;
-    line-height: 1.7;
-    text-align: justify;
+    text-align: justify; 
 }
 
+.pagina-historia {
+    background-color: #fcfcfc;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Contentor principal da página */
+.pagina-historia main {
+    max-width: 1000px; /* Alargado ligeiramente para o lado a lado caber bem */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.introducao-texto {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 60px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* --- BLOCO CRONOLÓGICO 1 (Imagem à Esquerda, Texto à Direita) --- */
 .bloco-cronologico1 {
     display: flex;
     flex-wrap: wrap; /* Permite que o ano fique no topo sozito */
@@ -83,6 +94,41 @@ footer {
     align-items: center;
 }
 
+/* O ANO (Ocupa o topo de ambos os blocos) */
+.ano-destaque {
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: -2px;
+    text-align: left;
+    margin: 0 0 10px 0; /* Margem apenas na parte de baixo */
+    display: inline-block; /* Faz com que a linha por baixo ocupe apenas o tamanho do texto do ano */
+    border-bottom: 4px solid #333; /* Cria a linha escura diretamente abaixo do ano */
+    padding-bottom: 5px; /* Espaço entre o número do ano e a linha */
+    padding-right: 250px; /* FAZ A MAGIA: Estica a linha um pouco para além do ano */
+}
+
+/* CONFIGURAÇÃO DO TEXTO (Ocupa metade do bloco) */
+.descricao-feito {
+    flex: 1; /* Distribui o espaço igualmente */
+    min-width: 300px; /* Garante que o texto não esmaga em ecrãs pequenos */
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* CONFIGURAÇÃO DA IMAGEM (Ocupa a outra metade do bloco) */
+.bloco-cronologico1 img,
+.bloco-cronologico2 img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px; /* Impede que a imagem fique gigante */
+    height: 300px; /* Altura fixa ideal */
+    object-fit: cover; /* Recorta a imagem proporcionalmente sem distorcer */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+/* REORDENAÇÃO MÁGICA PARA O BLOCO 2 */
+/* No bloco 2, queremos a imagem à direita, por isso dizemos ao CSS para renderizar o parágrafo primeiro (ordem 1) e a imagem depois (ordem 2) */
 .bloco-cronologico2 .descricao-feito {
     order: 1;
 }
@@ -91,10 +137,12 @@ footer {
     order: 2;
 }
 
-.titulo-feito {
-    margin: 0 0 10px 0;
-}
-
-.descricao-feito {
-    text-align: justify; 
+/* LINHA SEPARADORA NO FINAL DE CADA BLOCO */
+.linha-separadora {
+    width: 100%; /* Ocupa a largura total abaixo do par/imagem */
+    border: none;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin-top: 40px;
+    order: 3; /* Garante que fica sempre no fim do bloco */
 }
