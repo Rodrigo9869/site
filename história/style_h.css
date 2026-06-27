@@ -1,0 +1,118 @@
+/* ==========================================
+   CONFIGURAÇÃO DA PÁGINA DE HISTÓRIA
+   ========================================== */
+
+/* Fundo e base da página */
+.pagina-historia {
+    background-color: #fcfcfc;
+    color: #333;
+}
+
+/* Restringe a largura do conteúdo para uma leitura confortável */
+.pagina-historia main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Parágrafo de introdução da página */
+.introducao-texto {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* --- O ANO (Ocupa o topo de ambos os blocos) --- */
+.ano-destaque {
+    font-size: 3.5rem;
+    color: #0f6622; /* O verde do teu cabeçalho */
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: -2px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    
+    display: inline-block;
+    border-bottom: 4px solid #333; /* A linha diretamente abaixo do ano */
+    padding-bottom: 5px;
+    padding-right: 250px; /* Estende a linha para o lado direito */
+    
+    /* Garante que o ano fica sempre na sua linha exclusiva no topo */
+    width: 100%;
+    order: 0; 
+}
+
+/* --- BLOCO 1: Imagem à Esquerda, Texto à Direita --- */
+.bloco-cronologico1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 80px;
+    align-items: center; /* Centra a imagem com o texto verticalmente */
+}
+
+/* Inversão Visual para o Bloco 1 */
+.bloco-cronologico1 .descricao-feito {
+    order: 2; /* Texto vai para a direita */
+}
+
+.bloco-cronologico1 img {
+    order: 1; /* Imagem vai para a esquerda */
+}
+
+
+/* --- BLOCO 2: Imagem à Direita, Texto à Esquerda --- */
+.bloco-cronologico2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+/* Ordem Natural para o Bloco 2 */
+.bloco-cronologico2 .descricao-feito {
+    order: 1; /* Texto fica à esquerda */
+}
+
+.bloco-cronologico2 img {
+    order: 2; /* Imagem fica à direita */
+}
+
+
+/* --- CONFIGURAÇÕES DE ESPAÇO ELEMENTO A ELEMENTO --- */
+
+/* Parágrafos da história */
+.descricao-feito {
+    flex: 1;
+    min-width: 320px; /* Impede que o bloco de texto fique demasiado apertado */
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Imagens dos carros */
+.bloco-cronologico1 img,
+.bloco-cronologico2 img {
+    flex: 1;
+    min-width: 320px;
+    max-width: 450px; /* Garante tamanho controlado */
+    height: 300px;
+    object-fit: cover; /* Ajusta a imagem perfeitamente sem a distorcer */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+/* Linha horizontal cinzenta no final de cada bloco */
+.linha-separadora {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    order: 3; /* Força a ficar sempre no fim do bloco */
+}

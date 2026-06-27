@@ -1,40 +1,44 @@
-/* Estilo geral */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #0f6622;
+    background-color: #0f6622; /* Verde principal */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
-/* Menu */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Menu de Navegação */
 nav {
     background-color: #333;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav a {
     color: white;
-    margin: 15px;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: rgb(0, 255, 0);
-}
-
-/* Conteúdo */
-main {
-    padding: 20px;
-    text-align: center;
+    color: rgb(0, 255, 0); /* Destaque verde néon ao passar o rato */
 }
 
 /* Rodapé */
@@ -42,107 +46,75 @@ footer {
     background-color: #0f6622;
     color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
 }
 
-.titulo-feito {
-    margin: 0 0 10px 0;
-}
+/* ==========================================
+   ESTILOS ESPECÍFICOS DA PÁGINA INÍCIO (INDEX)
+   ========================================== */
 
-.descricao-feito {
-    text-align: justify; 
-}
-
-.pagina-historia {
-    background-color: #fcfcfc;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-/* Contentor principal da página */
-.pagina-historia main {
-    max-width: 1000px; /* Alargado ligeiramente para o lado a lado caber bem */
+/* Contentor principal do conteúdo */
+main {
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-.introducao-texto {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 60px;
-    line-height: 1.6;
+/* Secção de Boas-vindas */
+.introducao {
     text-align: center;
+    margin-bottom: 50px;
 }
 
-/* --- BLOCO CRONOLÓGICO 1 (Imagem à Esquerda, Texto à Direita) --- */
-.bloco-cronologico1 {
-    display: flex;
-    flex-wrap: wrap; /* Permite que o ano fique no topo sozito */
-    gap: 30px; /* Espaço entre a imagem e o texto */
-    margin-bottom: 80px;
-    align-items: center; /* Centra verticalmente a imagem com o texto */
+.introducao h2 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 15px;
 }
 
-/* --- BLOCO CRONOLÓGICO 2 (Imagem à Direita, Texto à Esquerda) --- */
-.bloco-cronologico2 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 80px;
-    align-items: center;
+.introducao p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #555;
 }
 
-/* O ANO (Ocupa o topo de ambos os blocos) */
-.ano-destaque {
-    font-family: 'Arial Black', sans-serif;
-    letter-spacing: -2px;
-    text-align: left;
-    margin: 0 0 10px 0; /* Margem apenas na parte de baixo */
-    display: inline-block; /* Faz com que a linha por baixo ocupe apenas o tamanho do texto do ano */
-    border-bottom: 4px solid #333; /* Cria a linha escura diretamente abaixo do ano */
-    padding-bottom: 5px; /* Espaço entre o número do ano e a linha */
-    padding-right: 250px; /* FAZ A MAGIA: Estica a linha um pouco para além do ano */
-}
-
-/* CONFIGURAÇÃO DO TEXTO (Ocupa metade do bloco) */
-.descricao-feito {
-    flex: 1; /* Distribui o espaço igualmente */
-    min-width: 300px; /* Garante que o texto não esmaga em ecrãs pequenos */
-    font-size: 1.05rem;
-    line-height: 1.7;
-    text-align: justify;
-}
-
-/* CONFIGURAÇÃO DA IMAGEM (Ocupa a outra metade do bloco) */
-.bloco-cronologico1 img,
-.bloco-cronologico2 img {
-    flex: 1;
-    min-width: 300px;
-    max-width: 450px; /* Impede que a imagem fique gigante */
-    height: 300px; /* Altura fixa ideal */
-    object-fit: cover; /* Recorta a imagem proporcionalmente sem distorcer */
+/* Secção do Resumo dos Continentes */
+.continentes-resumo {
+    background-color: white;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left; /* Alinha o conteúdo dos continentes de forma mais organizada */
 }
 
-/* REORDENAÇÃO MÁGICA PARA O BLOCO 2 */
-/* No bloco 2, queremos a imagem à direita, por isso dizemos ao CSS para renderizar o parágrafo primeiro (ordem 1) e a imagem depois (ordem 2) */
-.bloco-cronologico2 .descricao-feito {
-    order: 1;
+.continentes-resumo h3 {
+    font-size: 1.5rem;
+    color: #0f6622;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center; /* Mantém apenas o título centrado */
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
 }
 
-.bloco-cronologico2 img {
-    order: 2;
+/* Estilização de cada parágrafo de continente (funciona como uma lista detalhada) */
+.continentes-resumo p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    padding-left: 15px;
+    border-left: 3px solid #0f6622; /* Cria uma barrinha verde elegante à esquerda de cada continente */
 }
 
-/* LINHA SEPARADORA NO FINAL DE CADA BLOCO */
-.linha-separadora {
-    width: 100%; /* Ocupa a largura total abaixo do par/imagem */
-    border: none;
-    height: 1px;
-    background-color: #e5e5e5;
-    margin-top: 40px;
-    order: 3; /* Garante que fica sempre no fim do bloco */
+/* Remove a barra do último parágrafo para fechar bem o design */
+.continentes-resumo p:last-child {
+    margin-bottom: 0;
+    border-left-color: #333; /* O último (Mitos) ganha uma cor cinza escura para diferenciar */
+}
+
+.continentes-resumo strong {
+    color: #111;
+    font-size: 1.1rem;
 }
