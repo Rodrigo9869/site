@@ -68,10 +68,6 @@ main {
     text-align: left; /* Garante que o conteúdo da história não fica centrado e desalinhado */
 }
 
-.pagina-historia {
-    background-color: #fcfcfc;
-}
-
 .introducao-texto {
     font-size: 1.2rem;
     font-style: italic;
@@ -161,4 +157,8 @@ main {
     margin-top: 40px;
     margin-bottom: 20px;
     order: 3;
+}
+
+.link-h:hover { 
+    background-color: #a80fff; 
 }
