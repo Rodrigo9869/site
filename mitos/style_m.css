@@ -51,3 +51,106 @@ footer {
     margin-top: 40px;
     font-size: 0.9rem;
 }
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left; /* Garante que o conteúdo da história não fica centrado e desalinhado */
+}
+
+.introducao-texto {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.nome-destaque {
+    font-size: 3.5rem;
+    color: #0f6622;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: -2px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid #333;
+    padding-bottom: 5px;
+    padding-right: 250px; /* Linha estendida */
+    width: 100%;
+    order: 0; 
+}
+
+/* --- BLOCO 1: Imagem à Esquerda, Subtítulo à Direita --- */
+.bloco-cronologico1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.bloco-cronologico1 .nome-destaque { order: 1; } /* Título no topo */
+.bloco-cronologico1 img           { order: 2; } /* Imagem à esquerda */
+.bloco-cronologico1 .titulo-feito { order: 3; } /* Subtítulo à direita */
+.bloco-cronologico1 .descricao-feito { order: 4; } /* Parágrafo em baixo */
+.bloco-cronologico1 .linha-separadora { order: 5; }
+
+
+/* --- BLOCO 2: Subtítulo à Esquerda, Imagem à Direita --- */
+.bloco-cronologico2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.bloco-cronologico2 .nome-destaque { order: 1; } /* Título no topo */
+.bloco-cronologico2 .titulo-feito { order: 2; } /* Subtítulo à esquerda (TROCOU!) */
+.bloco-cronologico2 img           { order: 3; } /* Imagem à direita (TROCOU!) */
+.bloco-cronologico2 .descricao-feito { order: 4; } /* Parágrafo em baixo */
+.bloco-cronologico2 .linha-separadora { order: 5; }
+
+
+/* --- AJUSTE DOS TAMANHOS PARA COMPORTAMENTO LADO A LADO --- */
+.titulo-feito {
+    flex: 1;
+    min-width: 250px;
+    font-size: 1.4rem;
+    color: #444;
+    font-weight: bold;
+    margin: 0;
+}
+
+.bloco-cronologico1 img,
+.bloco-cronologico2 img {
+    flex: 1;
+    min-width: 320px;
+    max-width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.descricao-feito {
+    width: 100%; /* Garante que o parágrafo quebra sempre para a linha de baixo */
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+/* Linha separadora no fim de cada era */
+.linha-separadora {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    order: 3;
+}
