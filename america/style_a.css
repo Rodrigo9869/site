@@ -2,52 +2,168 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa; /* Cinza muito claro, estilo museu automóvel */
+    color: #222;
 }
 
-/* Cabeçalho */
+/* Cabeçalho - Azul Escuro de Competição Americano */
 header {
-    background-color: #0f6622; /* O teu verde principal */
+    background-color: #0b2240; 
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 35px 20px;
+    border-bottom: 5px solid #d92323; /* Detalhe em Vermelho Corrida */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+    font-size: 2.6rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 /* Menu de Navegação */
 nav {
-    background-color: #333;
+    background-color: #1a1a1a;
     text-align: center;
-    padding: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 14px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 nav a {
-    color: white;
+    color: #e0e0e0;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.05rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    color: rgb(0, 255, 0); /* Verde néon ao passar o rato */
+/* Hover e Link Ativo a apontar para o Vermelho Americano */
+nav a:hover, nav a.ativo {
+    color: #ff3333;
+}
+
+nav a.ativo {
+    border-bottom: 2px solid #ff3333;
 }
 
 /* Rodapé */
 footer {
-    background-color: #0f6622;
+    background-color: #0b2240;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+    padding: 20px;
+    margin-top: 50px;
     font-size: 0.9rem;
+    border-top: 4px solid #d92323;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+/* Estilo do Nome da Marca (Chevrolet, Dodge, Ford, Shelby) */
+.marca-destaque {
+    font-size: 3.5rem;
+    color: #0b2240; /* Nome da marca a combinar com o cabeçalho */
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: -2px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid #1a1a1a;
+    padding-bottom: 5px;
+    padding-right: 250px;
+    width: 100%;
+    order: 1; 
+}
+
+/* --- BLOCO 1: Imagem à Esquerda, Nome do Carro à Direita --- */
+.bloco-cronologico1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.bloco-cronologico1 .marca-destaque { order: 1; }
+.bloco-cronologico1 img           { order: 2; } /* Imagem à esquerda */
+.bloco-cronologico1 .titulo-carro { order: 3; } /* Nome à direita */
+.bloco-cronologico1 .descricao-carro { order: 4; }
+.bloco-cronologico1 .linha-separadora { order: 5; }
+
+/* --- BLOCO 2: Nome do Carro à Esquerda, Imagem à Direita --- */
+.bloco-cronologico2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.bloco-cronologico2 .marca-destaque { order: 1; }
+.bloco-cronologico2 .titulo-carro { order: 2; } /* Nome à esquerda (TROCOU!) */
+.bloco-cronologico2 img           { order: 3; } /* Imagem à direita (TROCOU!) */
+.bloco-cronologico2 .descricao-carro { order: 4; }
+.bloco-cronologico2 .linha-separadora { order: 5; }
+
+/* Detalhes do Carro (O H3 "esmagado") */
+.titulo-carro {
+    flex: 1;
+    min-width: 250px;
+    font-size: 1.45rem;
+    color: #c91a1a; /* O nome do carro ganha um destaque em vermelho desportivo */
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Configuração Restrita das Fotos dos Muscle Cars */
+.bloco-cronologico1 img,
+.bloco-cronologico2 img {
+    flex: 1;
+    min-width: 320px;
+    max-width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(11, 34, 64, 0.2); /* Sombra suave com tom azulado */
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Parágrafo de Contexto e Especificações Técnicas */
+.descricao-carro {
+    width: 100%; /* Quebra e vai para baixo obrigatoriamente */
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+/* Pequeno realce visual para a lista de especificações */
+.descricao-carro strong {
+    color: #0b2240;
+    display: inline-block;
+    margin-top: 10px;
+    border-left: 3px solid #d92323;
+    padding-left: 8px;
+}
+
+/* Linha separadora de blocos */
+.linha-separadora {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #d1d5db;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    order: 5;
 }
