@@ -8,16 +8,20 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #0f6622; /* Verde principal */
+    background-color: #000000;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 35px 20px;
+    border-bottom: 5px solid #FF5500;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+    font-size: 2.6rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 /* Menu de Navegação */
@@ -37,23 +41,24 @@ nav a {
     transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: rgb(0, 255, 0); /* Destaque verde néon ao passar o rato */
+/* Hover e Link Ativo a apontar para o Dourado Europeu */
+nav a:hover, nav a.ativo {
+    color: #FF5500;
+}
+
+nav a.ativo {
+    border-bottom: 2px solid #FF5500;
 }
 
 /* Rodapé */
 footer {
-    background-color: #0f6622;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 15px;
     margin-top: 40px;
     font-size: 0.9rem;
 }
-
-/* ==========================================
-   ESTILOS ESPECÍFICOS DA PÁGINA INÍCIO (INDEX)
-   ========================================== */
 
 /* Contentor principal do conteúdo */
 main {
@@ -91,7 +96,7 @@ main {
 
 .continentes-resumo h3 {
     font-size: 1.5rem;
-    color: #0f6622;
+    color: #E64A00;
     margin-top: 0;
     margin-bottom: 25px;
     text-align: center; /* Mantém apenas o título centrado */
@@ -105,7 +110,7 @@ main {
     line-height: 1.6;
     margin-bottom: 18px;
     padding-left: 15px;
-    border-left: 3px solid #0f6622; /* Cria uma barrinha verde elegante à esquerda de cada continente */
+    border-left: 3px solid #E64A00;
 }
 
 /* Remove a barra do último parágrafo para fechar bem o design */

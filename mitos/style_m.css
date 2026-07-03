@@ -8,25 +8,28 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #0f6622; /* O teu verde principal */
+    background-color: #0F172A;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 35px 20px;
+    border-bottom: 5px solid #38BDF8;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+    font-size: 2.6rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 /* Menu de Navegação */
 nav {
     background-color: #333;
     text-align: center;
-    padding: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 14px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 nav a {
@@ -35,16 +38,20 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.05rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    color: rgb(0, 255, 0); /* Verde néon ao passar o rato */
+nav a:hover, nav a.ativo {
+    color: #38BDF8;
+}
+
+nav a.ativo {
+    border-bottom: 2px solid #38BDF8;
 }
 
 /* Rodapé */
 footer {
-    background-color: #0f6622;
+    background-color: #0F172A;
     color: white;
     text-align: center;
     padding: 15px;
@@ -70,15 +77,15 @@ main {
 
 .nome-destaque {
     font-size: 3.5rem;
-    color: #0f6622;
+    color: #475569;
     font-family: 'Arial Black', sans-serif;
     letter-spacing: -2px;
     text-align: left;
     margin: 0 0 20px 0;
     display: inline-block;
-    border-bottom: 4px solid #333;
+    border-bottom: 4px solid #38BDF8;
     padding-bottom: 5px;
-    padding-right: 250px; /* Linha estendida */
+    padding-right: 250px;
     width: 100%;
     order: 0; 
 }
