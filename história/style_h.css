@@ -163,6 +163,9 @@ main {
     order: 3;
 }
 
-.link-h:hover { 
-    background-color: #a80fff; 
+.link-home {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
 }
+.link-home:hover { opacity: 0.85; }

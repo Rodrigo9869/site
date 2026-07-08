@@ -123,3 +123,10 @@ main {
     color: #111;
     font-size: 1.1rem;
 }
+
+.link-home {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+.link-home:hover { opacity: 0.85; }

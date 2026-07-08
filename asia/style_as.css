@@ -167,3 +167,10 @@ main {
     margin-bottom: 20px;
     order: 5;
 }
+
+.link-home {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+.link-home:hover { opacity: 0.85; }
